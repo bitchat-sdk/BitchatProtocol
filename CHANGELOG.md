@@ -17,10 +17,10 @@ Initial GA release.
 - TLV codec: `AnnouncementPacket` and `PrivateMessagePacket` with `encode()` / `decode(_:)` → `Data?` / type?
 - `peerIDFromNoiseKey(_:)` — derive 8-byte peer ID from 32-byte Noise static public key
 - `peerIDToHex(_:)` / `peerIDFromHex(_:)` — hex conversion helpers
-- Cross-language compatibility: wire format matches `@bitchat/protocol-core` (JS) and `bitchat_protocol` (Python)
+- Cross-language compatibility: wire format matches `@bitchat-sdk/protocol-core` (JS) and `bitchat_protocol` (Python)
 
 ### Protocol Compatibility
-Wire-format compatible with BitChat iOS (Swift), BitChat Android (Kotlin), `@bitchat/protocol-core`, and `bitchat_protocol`.
+Wire-format compatible with BitChat iOS (Swift), BitChat Android (Kotlin), `@bitchat-sdk/protocol-core`, and `bitchat_protocol`.
 
 [0.1.0]: https://github.com/bitchat-sdk/BitchatProtocol/releases/tag/0.1.0
 
