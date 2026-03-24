@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "bitlogger",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/bitchat-sdk/BitLogger.git",
+      "state" : {
+        "revision" : "38456a318051c5dcae3e977a9235ca7821182721",
+        "version" : "0.1.0"
+      }
+    }
+  ],
+  "version" : 2
+}
