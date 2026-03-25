@@ -53,7 +53,7 @@ public struct SyncTypeFlags: OptionSet, Sendable {
         self.init(rawValue: raw)
     }
 
-    public func contains(_ type: MessageType) -> Bool {
+    public func containsType(_ type: MessageType) -> Bool {
         guard let bit = SyncTypeFlags.bitIndex(for: type) else { return false }
         return contains(SyncTypeFlags(rawValue: 1 << UInt64(bit)))
     }
