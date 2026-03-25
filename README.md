@@ -1,5 +1,9 @@
 # BitchatProtocol
 
+[![Swift 5.9+](https://img.shields.io/badge/Swift-5.9%2B-orange)](https://swift.org)
+[![SPM Compatible](https://img.shields.io/badge/SPM-compatible-brightgreen)](https://github.com/bitchat-sdk/BitchatProtocol)
+[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](https://unlicense.org)
+
 Swift SPM package — BitChat binary protocol codec for iOS and macOS.
 
 Implements the v1/v2 wire format, TLV packet encoding, compression, peer ID derivation,
