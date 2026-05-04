@@ -2,6 +2,13 @@
 
 All notable changes follow [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [Unreleased]
+
+## [0.1.1] — 2026-05-05
+
+### Changed
+- Internal: centralize string trimming via `StringProtocol.trimmed` / `trimmedOrNilIfEmpty` helpers (upstream iOS PR #1079). Refactor only — no public API or wire-format change.
+
 ## [0.1.0] — 2026-03-22
 
 Initial GA release.
@@ -22,6 +29,7 @@ Initial GA release.
 ### Protocol Compatibility
 Wire-format compatible with BitChat iOS (Swift), BitChat Android (Kotlin), `@bitchat-sdk/protocol-core`, and `bitchat_protocol`.
 
+[0.1.1]: https://github.com/bitchat-sdk/BitchatProtocol/compare/0.1.0...0.1.1
 [0.1.0]: https://github.com/bitchat-sdk/BitchatProtocol/releases/tag/0.1.0
 
-[Unreleased]: https://github.com/bitchat-sdk/BitchatProtocol/compare/0.1.0...HEAD
+[Unreleased]: https://github.com/bitchat-sdk/BitchatProtocol/compare/0.1.1...HEAD
