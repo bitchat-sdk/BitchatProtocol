@@ -4,6 +4,8 @@ All notable changes follow [Keep a Changelog](https://keepachangelog.com/en/1.1.
 
 ## [Unreleased]
 
+## [0.1.2] — 2026-06-12
+
 ### Security
 - `RequestSyncPacket.decode(from:)` now rejects Golomb-Rice parameter values above `RequestSyncPacket.maxP` (32), matching upstream iOS GCS input validation (upstream iOS PR #1331). Previously any `p ≥ 1` was accepted.
 
@@ -36,7 +38,8 @@ Initial GA release.
 ### Protocol Compatibility
 Wire-format compatible with BitChat iOS (Swift), BitChat Android (Kotlin), `@bitchat-sdk/protocol-core`, and `bitchat_protocol`.
 
+[0.1.2]: https://github.com/bitchat-sdk/BitchatProtocol/compare/0.1.1...0.1.2
 [0.1.1]: https://github.com/bitchat-sdk/BitchatProtocol/compare/0.1.0...0.1.1
 [0.1.0]: https://github.com/bitchat-sdk/BitchatProtocol/releases/tag/0.1.0
 
-[Unreleased]: https://github.com/bitchat-sdk/BitchatProtocol/compare/0.1.1...HEAD
+[Unreleased]: https://github.com/bitchat-sdk/BitchatProtocol/compare/0.1.2...HEAD
