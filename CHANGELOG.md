@@ -4,6 +4,13 @@ All notable changes follow [Keep a Changelog](https://keepachangelog.com/en/1.1.
 
 ## [Unreleased]
 
+### Security
+- `RequestSyncPacket.decode(from:)` now rejects Golomb-Rice parameter values above `RequestSyncPacket.maxP` (32), matching upstream iOS GCS input validation (upstream iOS PR #1331). Previously any `p ≥ 1` was accepted.
+
+### Added
+- `RequestSyncPacket.maxP` — public constant for the maximum accepted Golomb-Rice parameter.
+- New `TransportConfig` constants for the Nostr layer: `nostrInboundEventDedupCap`, `nostrInboundEventDedupTrimTarget`, `nostrDuplicateEventLogInterval`, `nostrInboundEventLogInterval`, `nostrPendingSendQueueCap` (used by BitchatNostr's relay-manager hardening, upstream iOS PRs #1331/#1332).
+
 ## [0.1.1] — 2026-05-05
 
 ### Changed

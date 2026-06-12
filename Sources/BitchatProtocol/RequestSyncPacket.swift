@@ -5,6 +5,10 @@ import Foundation
 //  - 0x02: M (uint32, big-endian) — hash range (N * 2^P)
 //  - 0x03: data (opaque) — GR bitstream bytes (MSB-first)
 public struct RequestSyncPacket {
+    /// Maximum accepted Golomb-Rice parameter. Mirrors upstream GCSFilter.maxP;
+    /// values above this make no sense for a GCS filter and are rejected on decode.
+    public static let maxP = 32
+
     public let p: Int
     public let m: UInt32
     public let data: Data
@@ -96,7 +100,7 @@ public struct RequestSyncPacket {
             }
         }
 
-        guard let pp = p, let mm = m, let dd = payload, pp >= 1, mm > 0 else { return nil }
+        guard let pp = p, let mm = m, let dd = payload, pp >= 1, pp <= Self.maxP, mm > 0 else { return nil }
         return RequestSyncPacket(p: pp, m: mm, data: dd, types: types, sinceTimestamp: sinceTimestamp, fragmentIdFilter: fragmentIdFilter)
     }
 }

@@ -23,6 +23,11 @@ public enum TransportConfig {
     public static let nostrGeohashSampleLookbackSeconds: TimeInterval = 300
     public static let nostrGeohashSampleLimit: Int = 1_000
     public static let nostrDMSubscribeLookbackSeconds: TimeInterval = 86_400
+    public static let nostrInboundEventDedupCap: Int = 4_096
+    public static let nostrInboundEventDedupTrimTarget: Int = 3_072
+    public static let nostrDuplicateEventLogInterval: Int = 50
+    public static let nostrInboundEventLogInterval: Int = 100
+    public static let nostrPendingSendQueueCap: Int = 200
 
     // MARK: - Geo relay directory
     public static let geoRelayFetchIntervalSeconds: TimeInterval = 86_400
